@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/desenvolvimento/java/jackson/jackson-annotations-2.8.5.jar"/>
+	<classpathentry kind="lib" path="/desenvolvimento/java/jackson/jackson-core-2.8.5.jar"/>
+	<classpathentry kind="lib" path="/desenvolvimento/java/jackson/jackson-databind-2.8.5.jar"/>
+	<classpathentry kind="lib" path="/desenvolvimento/projetossvn/sefaz-pi/libcomum/applet/syntheticaSilverMoon.jar"/>
+	<classpathentry kind="lib" path="/desenvolvimento/projetossvn/sefaz-pi/libcomum/applet/synthetica_hack.jar"/>
+	<classpathentry kind="lib" path="/desenvolvimento/java/commons-io-2.5/commons-io-2.5.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

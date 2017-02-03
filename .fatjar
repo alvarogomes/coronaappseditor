@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Tue Nov 22 15:50:02 BRT 2016
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=coronaappseditor.jar
+manifest.mergeall=true
+manifest.mainclass=br.com.virtualsolucoesti.main.Main
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=

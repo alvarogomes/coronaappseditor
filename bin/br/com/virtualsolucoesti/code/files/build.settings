@@ -1,0 +1,93 @@
+-- Supported values for orientation:
+-- portrait, portraitUpsideDown, landscapeLeft, landscapeRight
+settings =
+{
+   --[[] splashScreen = 
+    {
+        enable = false
+    },]]--
+    plugins =
+    {
+        
+    },   
+    android =
+    {
+        versionCode = "11",
+        usesPermissions =
+        {
+                "android.permission.INTERNET",
+                "android.permission.WRITE_EXTERNAL_STORAGE",
+                --optional permission used to display current location via the GPS
+	            "android.permission.ACCESS_FINE_LOCATION",
+	
+	            --optional permission used to display current location via WiFi or cellular service
+	            "android.permission.ACCESS_COARSE_LOCATION",
+        },
+        usesFeatures =
+        {
+            -- If you set permissions "ACCESS_FINE_LOCATION" and "ACCESS_COARSE_LOCATION" above,
+            -- you may want to set up your app to not require location services as follows.
+            -- Otherwise, devices that do not have location sevices (such as a GPS) will be unable
+            -- to purchase this app in the app store.
+            { name = "android.hardware.location", required = false },
+            { name = "android.hardware.location.gps", required = false },
+            { name = "android.hardware.location.network", required = false }
+        },
+        
+    },
+    orientation = {
+                default = "portrait",
+                content = "portrait",
+                supported =
+                        {
+                            "portrait"
+                        },
+    },
+        
+    iphone ={
+            plist =
+            {
+            		NSLocationAlwaysUsageDescription = "This app would like to use location services.",
+            		NSLocationWhenInUseUsageDescription = "This app would like to use location services.",
+                    UIPrerenderedIcon = true,                        
+                    UIRequiredDeviceCapabilities = {"wifi"},
+                    NSAppTransportSecurity =
+                    {
+                        NSAllowsArbitraryLoads = true,
+                        NSExceptionDomains = 
+                        {
+                            ["fbcdn.net"] = 
+                            {
+                                NSIncludesSubdomains = true,
+                                NSExceptionRequiresForwardSecrecy = false,
+                            },
+                            ["facebook.com"] = 
+                            {
+                                NSIncludesSubdomains = true,
+                                NSExceptionRequiresForwardSecrecy = false,
+                            },
+                            ["akamaihd.net"] = 
+                            {
+                                NSIncludesSubdomains = true,
+                                NSExceptionRequiresForwardSecrecy = false,
+                            },
+                        },
+                    },
+                    -- Whitelist Facebook Apps
+                    LSApplicationQueriesSchemes = 
+                    {
+                        "fb",
+                        "fbapi20130214",
+                        "fbapi20130410",
+                        "fbapi20140410",
+                        "fbapi20140116",
+                        "fbapi20150313",
+                        "fbapi20150629",
+                        "fbauth",
+                        "fbauth2",
+                        "fb-messenger-api20140430",
+                    },
+                    
+            },
+    }
+}
